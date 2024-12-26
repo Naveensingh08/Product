@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+ 
+<html xmlns:th="http://www.thymeleaf.org">
+	<head></head>
+	
+	<bod>
+		<table>
+			<form th:action="@{/getForm}" th:object="${productModel}" method="post">
+				
+
+				<tr>
+					<th>Product Form</th>
+				</tr>
+
+				<tr>
+					<td>Name</td>
+					<td><input type="text" name="name">
+					</td>
+					
+				</tr>
+				
+				<tr>
+				<td>Brand</td>
+				<td><input type="text" name="brand"></td>
+									
+				</tr>
+				
+				<tr>
+				<td>MadeIn</td>
+				<td><input type="text" name="madeIn"></td>
+									
+				</tr>
+				
+				<tr>
+				<td>Price</td>
+				<td><input type="number" name="price"></td>
+									
+				</tr>
+				
+				
+				<tr>
+				<td>Quantity</td>
+				<td><input type="number" name="quantity"></td>				
+				</tr>
+				
+				<tr>
+					<td><input type="submit" value="Submit"></td>
+					<td><input type="reset" value="Reset"></td>
+				</tr>
+			</form>
+		</table>
+	</bod>
+</html>

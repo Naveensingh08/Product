@@ -1,0 +1,46 @@
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Search-Product</title>
+	</head>
+	
+	<body>
+		
+		<form th:action="@{/searchByID}" method="post">
+			
+			<table>Search By ID</table>
+			<input type="text" name="id">
+			<button type="submit"> Submit</button>
+		</form>
+		
+		<div th:if="${products != null}">
+			
+			<h3>Product Details</h3>
+			
+			<p><strong>ID:</strong> <span th:text="${products.id}"></span></p>
+			
+			<p><strong>Name:</strong> <span th:text="${products.name}"></span></p>
+			
+			<p><strong>Brand:</strong> <span th:text="${products.brand}"></span></p>
+			
+			<p><strong>MadeIn:</strong> <span th:text="${products.madeIn}"></span></p>
+			
+			<p><strong>Price:</strong> <span th:text="${products.price}"></span></p>
+			
+			<p><strong>Discount:</strong> <span th:text="${products.discount}"></span></p>
+			
+			<p><strong>Tax:</strong> <span th:text="${products.tax}"></span></p>
+			
+			<p><strong>TaxPrice:</strong> <span th:text="${products.taxPrice}"></span></p>
+			
+			<p><strong>OfferPrice:</strong> <span th:text="${products.offerPrice}"></span></p>
+			
+			<p><strong>FinalPrice:</strong> <span th:text="${products.finalPrice}"></span></p>
+		</div>
+		
+		
+		<div th:if="${products == null}">
+			<h3>No data Found</h3>
+		</div>
+			
+	</body>
+</html>
